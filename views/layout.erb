@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>MM NA WW</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+      <style>
+
+      body{
+        background-color: White;
+      }
+
+
+      nav {
+        background-color: Black;
+      }
+
+
+      </style>
+    </head>
+    <body>
+      <div>
+        <nav>
+          <div class="nav-wrapper">
+            <a href="/" class="brand-logo">MimiNaWewe</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="/" >About</a></li>
+              <li><a href="/" >contact</a></li>
+              <li><a href="/" >login/sign-up</a></li>
+          </div>
+        </nav>
+      </div>
+
+      <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <nav id="spy">
+                <ul class="sidebar-nav nav">
+                    <li class="sidebar-brand">
+                        <a href="#home"><span class="fa fa-home solo">Football</span></a>
+                    </li>
+                    <li>
+                        <a href="#anch1" data-scroll>
+                            <span class="fa fa-anchor solo">Basketball</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#anch2" data-scroll>
+                            <span class="fa fa-anchor solo">Tennis</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#anch3" data-scroll>
+                            <span class="fa fa-anchor solo">Rugby</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#anch4" data-scroll>
+                            <span class="fa fa-anchor solo">Cricket</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+      </div>
+
+
+
+  <div id="page-content-wrapper">
+
+      <div>
+        <%= yield %>
+      </div>
+    </div>
+    </body>
+  </html>

@@ -1,0 +1,7 @@
+development:
+    adapter: postgresql
+    database: gaming_development
+
+test:
+    adapter: postgresql
+    database: gaming_test
