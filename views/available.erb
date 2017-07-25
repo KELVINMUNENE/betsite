@@ -1,0 +1,21 @@
+<h1>All Available games</h1>
+<hr>
+
+
+<% if @all_games.any?() %>
+    <h3>Here are your Games:</h3>
+
+    <ol>
+      <% @all_games.each() do |game| %>
+        <li><a href="/available/<%= game.id()%>"><%= game.name() %></a> </li>
+      <% end %>
+    </ol>
+
+  <% else %>
+
+      <p>No games availbale</p>
+
+  <% end %>
+
+
+
