@@ -1,12 +1,13 @@
 
 <div class="details">
-<h5>
-<img src="<%=@game.player_image() %> "><br>
+
+<div style="text-align: left"><img src="<%=@game.player_image() %> "></div>
 <%= @game.name() %><br>
+
 Deposited Ksh:<%=@game.amount() %><br>
 Selection:<%=@game.choice() %><br>
 Player Name:<%=@game.player2() %><br>
-</h5>
+
 </div>
 
 Balance <%= @balance %>
@@ -27,5 +28,9 @@ Balance <%= @balance %>
   
     
 
-    <button class="enjoy-css" type="submit">Place Bet</button>
+    <a href="/success"><button class="enjoy-css" type="submit">Place Bet</button></a>
   </form>
+
+
+
+
