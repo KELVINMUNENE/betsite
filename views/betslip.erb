@@ -1,0 +1,43 @@
+ <%= @balance %>
+ <% @userplayer.each() do |user| %>
+       
+      
+<table dir="ltr" width="500" border="1" 
+			summary="purpose/structure for speech output">
+	<caption>Here we assign header information to cells 
+			by setting the scope attribute.
+	</caption>
+	<colgroup width="50%" />
+	<colgroup id="colgroup" class="colgroup" align="center" 
+			valign="middle" title="title" width="1*" 
+			span="2" style="background:#ddd;" />
+	<thead>
+		<tr>
+			<th scope="col">Games</th>
+			<th scope="col">team</th>
+			<th scope="col">Amount</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<td><%= user.game() %></td>
+			<td><%= user.selection() %></td>
+			<td><%= user.amount() %></td>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td >
+			<%= @amount %>  </td>
+			<td><%= @select%></td>
+			<td><%= @game %></td>
+		</tr>
+		<!-- <tr>
+			<td>Greedo</td>
+			<td>South</td>
+			<td>Scumbag</td>
+		</tr> -->
+	</tbody>
+</table>
+
+<% end %>

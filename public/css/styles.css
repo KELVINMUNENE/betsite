@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Chonburi|Orbitron');
 img {
   max-width:20%;
   max-height:20%;
@@ -138,8 +139,9 @@ imgliga{
 }
 .footer {
   
-  background-image: url('https://cdn.pixabay.com/photo/2013/07/23/23/23/cards-166440_960_720.jpg');
+  background-image: url('https://images.pexels.com/photos/14676/pexels-photo-14676.png?w=940&h=650&auto=compress&cs=tinysrgb');
   background-repeat: no-repeat;
+ background-size: cover;
   height: auto;
   padding-bottom: 30px;
   position: relative;
@@ -203,7 +205,7 @@ imgliga{
   height: 40px;
   padding: 0;
   width: 100%;
-  color: #fff;
+  color: Green;
 }
 .newsletter-box {
   overflow: hidden;
@@ -263,4 +265,61 @@ imgliga{
 }
 .payments {
   font-size: 1.5em; 
+}
+/*
+Credits:
+Code snippet by @maridlcrmn (Follow me on Twitter)
+Images by Nike.com (http://www.nike.com/us/en_us/)
+Logo by Sneaker-mission.com (http://www.sneaker-mission.com/)
+*/
+
+.navbar-brand { 
+  width: 70px;
+  height: 50px;
+  background: url('http://www.sneaker-mission.com/uploads/3/1/2/7/31279819/5617441.png') no-repeat center center;
+  background-size: 50px;  
+}
+
+.nav-tabs {
+  display: inline-block;
+  border-bottom: none;
+  padding-top: 15px;
+  font-weight: bold;
+}
+.nav-tabs > li > a, 
+.nav-tabs > li > a:hover, 
+.nav-tabs > li > a:focus, 
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border: none;
+  border-radius: 0;
+}
+
+.nav-list { border-bottom: 1px solid #eee; }
+.nav-list > li { 
+  padding: 20px 15px 15px;
+  border-left: 1px solid #eee; 
+}
+.nav-list > li:last-child { border-right: 1px solid #eee; }
+.nav-list > li > a:hover { text-decoration: none; }
+.nav-list > li > a > span {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.mega-dropdown { position: static !important; }
+.mega-dropdown-menu {
+  padding: 20px 15px 15px;
+  text-align: center;
+  width: 100%;
+}
+#gradient-list{
+ font-family: 'Orbitron', sans-serif;
+}
+
+#balance {
+  text-align: left;
+  float: left;
 }

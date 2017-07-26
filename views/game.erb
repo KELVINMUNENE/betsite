@@ -1,4 +1,7 @@
-
+  
+<div class="balance">
+	Balance:<%= @balance %>
+</div>
 <div class="details">
 
 <div style="text-align: left"><img src="<%=@game.player_image() %> "></div>
@@ -10,11 +13,10 @@ Player Name:<%=@game.player2() %><br>
 
 </div>
 
-Balance <%= @balance %>
 
 
 
-<form action="/available" method="post">
+<form action="/betslip" method="post">
 
     
     <label for="amount">Amount:</label>
@@ -28,8 +30,10 @@ Balance <%= @balance %>
   
     
 
-    <a href="/success"><button class="enjoy-css" type="submit">Place Bet</button></a>
+    <button class="enjoy-css" type="submit">Place Bet</button>
   </form>
+  <hr>
+
 
 
 

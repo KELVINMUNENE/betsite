@@ -35,16 +35,21 @@ end
 
 get '/available/:id' do
   @game = Game.find(params.fetch("id").to_i())
-  @balance = 2000 
   erb(:game)
 end
 
-post '/available' do
+post '/betslip' do
 @amount = params.fetch("amount").to_i()
-@amount = @amount - 50
+@balance = 2000
+@remain = @balance - @amount
 @selection = params.fetch("choice")
-game = params.fetch("game")
-erb(:success)
+@game = params.fetch("game")
+@user = User.new({:amount => @amount, :selection => @selection, :game=> @game })
+if @user.save()
+  erb(:success)
+else
+  erb(:error)
+end
 end
 
 
@@ -52,8 +57,25 @@ get '/about' do
   erb(:about)
 end
 
-    
+get ('/betslip') do
+  @userplayer = User.all()
+  @balance = 2000
+  erb(:betslip)
+end
 	
+get ('/deposit') do
+   @balance=2000
+  erb(:deposit)
+end
+
+post ('/deposit') do
+  @balance=2000
+  @deposit = params.fetch("amount1").to_i()
+  @remain = @balance + @deposit
+  
+  erb(:deposit)
+end
+
    
 
 
