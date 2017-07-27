@@ -1,8 +1,11 @@
 <ul class="nav navbar-nav navbar-right">
      <li><a href="/deposit">Deposit</a></li>
-    <li><a href="/sessions/login">Login</a></li>
-     <li><a href="/registrations/signup">Sign up</a></li>
-</ul>
+     <li><a href="/sessions/logout">Log Out</a></li>
+  </ul>
+
+<div class="container">
+  <div class="well">"Welcome, <%=@user.name%>!"</div>
+</div>
 <div id="carousel-example" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
@@ -19,7 +22,7 @@
       </div>
     </div>
     <div class="item">
-      <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGioUsstIrllMls_k9wAbTZ4peAzXgjhjpvuVspqTrdMkV4oqTSw" /></a>
+      <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCPOjcHYi6D52gJ1Fe3--UeS4fOEgDTMrxgSrmBN3YOm8MTbF5" /></a>
       <div class="carousel-caption">
         <h3>Meow</h3>
         <p>Just Kitten Around</p>
@@ -104,7 +107,7 @@
                         <li>
                             <div class="input-append newsletter-box text-center">
                                 <input type="text" class="full text-center" placeholder="Email ">
-                                <button  class="btn  bg-gray" type="button"><a href="/about" >send Feedback </a></button>
+                                <button  action="/about" class="btn  bg-gray" type="button"> send Feedback </button>
                             </div>
                         </li>
                     </ul>

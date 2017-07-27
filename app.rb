@@ -1,4 +1,5 @@
 require('bundler/setup')
+require('pry')
 Bundler.require(:default)
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 also_reload('lib/**/*.rb')
@@ -76,8 +77,56 @@ post ('/deposit') do
   erb(:deposit)
 end
 
-   
+
+
+get '/home' do
+  @user = User.find(session[:id])
+  erb(:home)
+end
 
 
 
-   
+get ('/sessions/login') do
+erb(:login)
+end 
+
+
+
+get('/registrations/signup') do
+  erb(:signup)
+end
+
+
+post('/registrations') do
+  @name = params.fetch("name")
+  @email = params.fetch("email")
+  @password = params.fetch("password")
+  @user = User.new({:name => @name, :email => @email, :password => @password })
+  binding.pry
+  @user.save()
+ redirect '/sessions/login'
+end
+
+
+
+post ('/sessions') do
+ @user = User.find_by(name: params["name"], email: params["email"])
+ if @user && @user.password
+ session[:id] = @user.id
+ redirect '/home'
+else
+  redirect '/'
+end
+
+end
+
+
+
+get ('/sessions/logout') do
+  session.clear
+end
+
+
+get '/registrations' do
+  erb(:login)
+end
