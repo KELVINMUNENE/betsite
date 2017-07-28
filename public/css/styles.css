@@ -341,3 +341,6 @@ a:link {
 #bangle{
   color:Green;
 }
+.images{
+  background-image: url('https://images.pexels.com/photos/340901/pexels-photo-340901.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
+}

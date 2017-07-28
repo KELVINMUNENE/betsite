@@ -23,7 +23,7 @@ also_reload('lib/**/*.rb')
     player_image = params.fetch("player_image")
     @game = Game.new({:name => name, :amount => amount, :choice => choice, :player2 => player2, :player_image => player_image })
     if @game.save()
-      erb(:success)
+      erb(:addition)
     else
       erb(:error)
     end
@@ -41,7 +41,7 @@ end
 
 post '/betslip' do
 @amount = params.fetch("amount").to_i()
-@balance = 2000
+@balance = 3845
 @remain = @balance - @amount
 @selection = params.fetch("choice")
 @game = params.fetch("game")
@@ -60,17 +60,17 @@ end
 
 get ('/betslip') do
   @userplayer = User.all()
-  @balance = 2000
+  @balance = 3745
   erb(:betslip)
 end
 	
 get ('/deposit') do
-   @balance=2000
+   @balance=3745
   erb(:deposit)
 end
 
 post ('/deposit') do
-  @balance=2000
+  @balance=3745
   @deposit = params.fetch("amount1").to_i()
   @remain = @balance + @deposit
   
@@ -130,3 +130,4 @@ end
 get '/registrations' do
   erb(:login)
 end
+
