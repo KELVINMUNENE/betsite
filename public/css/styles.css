@@ -139,7 +139,7 @@ imgliga{
 }
 .footer {
   
-  background-image: url('https://images.pexels.com/photos/14676/pexels-photo-14676.png?w=940&h=650&auto=compress&cs=tinysrgb');
+  background-image: url('https://images.pexels.com/photos/340901/pexels-photo-340901.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
   background-repeat: no-repeat;
  background-size: cover;
   height: auto;
@@ -317,9 +317,27 @@ Logo by Sneaker-mission.com (http://www.sneaker-mission.com/)
 }
 #gradient-list{
  font-family: 'Orbitron', sans-serif;
+ 
 }
 
 #balance {
   text-align: left;
   float: left;
+}
+.league {
+  font-family: 'Orbitron';
+}
+#hallo {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUSOn1nNpmKB8H9CeCkqffyX0pkMWE-PR1MRX_8vieoyNJ71cZ");
+  background-size: cover;
+}
+a:link {
+    color: black;
+}
+#one{
+   font-family: 'Orbitron';
+
+}
+#bangle{
+  color:Green;
 }

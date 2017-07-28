@@ -1,16 +1,16 @@
-<h1>All Available games</h1>
+<h1 class="league">All Available games</h1>
 <hr>
 
 
 <% if @all_games.any?() %>
-    <h3>Here are your Games:</h3>
-
-    <ol>
+    <h3 class="league">Here are your Games:</h3>
+<b>
+    <ul class="league" id="hallo">
       <% @all_games.each() do |game| %>
         <li><a href="/available/<%= game.id()%>"><%= game.name() %></a> </li>
       <% end %>
-    </ol>
-
+    </ul>
+<b>
   <% else %>
 
       <p>No games availbale</p>
